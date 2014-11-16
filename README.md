@@ -3,4 +3,4 @@ hagrid
 
 CSS Framework
 
-Démonstration: nsanchez.olympe.in/hagrid.html
+Démonstration & Documentation [ici](http://nsanchez.olympe.in/hagrid.html)
