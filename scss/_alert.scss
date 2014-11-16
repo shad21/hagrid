@@ -1,0 +1,27 @@
+// variables
+$alert-success-color: white;
+$alert-danger-color: black;
+$alert-info-color: white;
+$alert-avertissement-color: black;
+
+$alert-success-bcgc: #1CB841;
+$alert-danger-bcgc: #F04124;
+$alert-info-bcgc: #16bcf7;
+$alert-avertissement-bcgc: #ffaf1e;
+
+
+@mixin alert($alert-color: #4f4f4f, $alert-background-color: #15e8c0){
+  @include border-radius(4px);
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 18px;
+  color: $alert-color;
+  background-color: $alert-background-color;
+  border: darken($alert-background-color, 10%) 1px solid;
+  // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.alert{@include alert();}
+.success { @include alert($alert-success-color, $alert-success-bcgc);}
+.danger { @include alert($alert-danger-color, $alert-danger-bcgc); }
+.info { @include alert($alert-info-color, $alert-info-bcgc);}
+.avertissement { @include alert($alert-avertissement-color, $alert-avertissement-bcgc);}

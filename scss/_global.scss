@@ -1,0 +1,119 @@
+.wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  .row.hagrid-row{
+    background-color: lighten(#fcaaa3, 5%);
+    border: 1px solid black;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    span hr{
+      margin: 0;
+    }
+  }
+  .row .grid-ex{
+      border: 1px solid gray;
+      .col{
+        background-color: rgba(225, 225, 225, 0.66);
+        border: 3px solid white;
+        padding: 0.2rem;
+        &:nth-child(2){
+          background: rgba(167, 152, 155, 0.69);
+        }
+      }
+      .no-border{
+        border-right: none !important;
+      }
+  }
+}
+
+.hagrid-row{
+  > div{
+    //padding: 5px;
+    &:nth-child(odd) {
+      background-color: darken(#fcaaa3, 10%);
+    }
+    .box{
+      min-height: 36px;
+    }
+  }
+}
+
+.hagrid-main{
+  border-left: 1px solid lightgray;
+  padding: 0 13px;
+  @media only screen and (min-width: $desktop){
+    padding-left: 50px;
+  }
+}
+
+
+.desktop-menu{
+  background-color: #ffffff;
+}
+
+.side-nav{
+  height: 100%;
+  nav{
+    margin: auto;
+  }
+  ul{
+    display: block;
+    padding: 0.77778rem 0;
+    list-style-type: none;
+    list-style-position: outside;
+    li a{
+      display: block;
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+      color: #525252;
+      padding: 0.38889rem 0.77778rem;
+      font-size: 0.875rem;
+      font-weight: normal;
+      text-decoration: none;
+      &:hover{
+        background-color: whitesmoke;
+        color: lightcoral;
+        //@include transition-property(background-color);
+        //@include transition-duration(0.2s);
+        //@include transition-timing-function(ease-in);
+      }
+      &.actif{
+        background-color: lightcoral;
+        font-weight: bold;
+        border: none;
+        color: #00162d;
+      }
+    }
+  }
+}
+
+h1.hg-subtitle,
+h2.hg-subtitle,
+h3.hg-subtitle,
+h4.hg-subtitle,
+h5.hg-subtitle,
+h6.hg-subtitle{
+  padding-left: 6px;
+  border-left: 3px solid #1FA2D6;
+  margin: 2rem auto;
+}
+
+
+.hg-link{
+  color: #f07472;
+  &:hover{
+    border-bottom: 1px dotted #F07472;
+    color: darken(#f07472, 15%);
+  }
+}
+
+.hagrid-footer{
+  margin-top: 2rem;
+  height: 75px;
+  line-height: 75px;
+  background-color: #0e0b04;
+  color: #ffffff;
+  p{
+    font-size: 0.750rem;
+    margin: 0;
+  }
+}

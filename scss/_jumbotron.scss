@@ -1,0 +1,23 @@
+/*===========================*/
+/*========Variables=========*/
+
+$jumbotron-bgc: #efe9e0;
+$jumbotron-border-radius: 3px;
+$jumbotron-font-size: 1.250rem;
+
+
+.jumbotron{
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background-color: $jumbotron-bgc;
+  @include border-radius($jumbotron-border-radius);
+  h1{
+    color: #413f3d;
+    font-weight: bolder;
+  }
+  p{
+    font-size: $jumbotron-font-size;
+    line-height: 1.1;
+  }
+}

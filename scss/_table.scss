@@ -1,0 +1,59 @@
+// Variables
+$table-background-color: white;
+$table-margin-bottom: 1.1rem;
+$table-background-odd-even: #f8f8f8;
+$table-background-hover: #dadada;
+
+
+
+table{
+  margin-bottom: 1rem;
+  background: $table-background-color;
+  margin-bottom: $table-margin-bottom;
+  border: solid 1px #dddddd;
+  table-layout: auto;
+  font-size: 0.77778rem;
+  thead{
+    background: #eaeaea;
+    tr th {
+      font-weight: bold;
+    }
+  }
+  tr th,td{
+    padding: 0.5em 1em;
+  }
+}
+
+table.bordered{
+  border-collapse: collapse;
+
+  tr, th, td{
+    border: 1px solid #dddddd;
+  }
+}
+
+table.stripped-odd{
+  tbody tr:nth-child(odd){
+    background-color: $table-background-odd-even;
+  }
+  tr th,td{
+    padding: 0.5em 1em;
+    border: none;
+  }
+}
+
+table.stripped-even{
+  tbody tr:nth-child(even){
+    background-color: $table-background-odd-even;
+  }
+  tr th,td{
+    padding: 0.5em 1em;
+    border: none;
+  }
+}
+
+table.hover{
+  tbody tr:hover{
+    background-color: $table-background-hover;
+  }
+}

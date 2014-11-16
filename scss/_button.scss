@@ -1,0 +1,85 @@
+// colors
+$btn-green: #62e57a;
+$btn-blue: #96d7f7;
+$btn-purple: #DDAEFF;
+$btn-red: #f25146;
+$btn-brown: #C1A680;
+$btn-yellow: #f2f224;
+$btn-disabled: #f0f0f0;
+$btn-active: #b8bcbb;
+
+// padding
+$btn-padding: 0.4rem 0.7rem;
+
+// border
+$border: true;
+
+// border color
+$btn-border-darken: 15%;
+
+// border-radius
+$btn-border-radius: 2px;
+
+// font-family
+$btn-font-family: 'Roboto slab', sans-serif !default;
+
+// font-size
+$btn-size-xlarge: 150%;
+$btn-size-large: 120%;
+$btn-size-small: 70%;
+$btn-size-xsmall: 50%;
+
+
+@mixin btn($colorb: #ffffff, $btn-default-size: 100%) {
+  display: inline-block;
+  font-family: $btn-font-family;
+  background-color: $colorb;
+  font-weight: lighter;
+  font-size: $btn-default-size;
+  margin-bottom: 1rem;
+  color:#444;
+  cursor:pointer;
+  @include border-radius($btn-border-radius);
+  padding: $btn-padding;
+  text-decoration:none;
+  line-height: normal;
+  white-space: nowrap;
+  outline: none;
+
+  @if $border{
+    border: darken($colorb, $btn-border-darken) 1px solid;
+  }
+  @else if $border == false{
+    border: none;
+  }
+
+  &:hover{
+    background-color:darken($colorb, 15%);
+    transition: background-color 300ms ease-out;
+  }
+  &[class="disabled"]{
+    background-color: $colorb;
+    color: lightgray;
+    cursor: not-allowed;
+  }
+}
+
+.btn{ @include btn(); }
+.btn-green{ @include btn($btn-green); }
+.btn-blue{ @include btn($btn-blue);}
+.btn-purple{ @include btn($btn-purple);}
+.btn-red{ @include btn($btn-red);}
+.btn-brown{ @include btn($btn-brown);}
+.btn-yellow{ @include btn($btn-yellow);}
+
+.disabled{ @include btn($btn-disabled);}
+.btn.active{
+  @include btn($btn-active);
+  box-shadow: 0 0 0 1px rgba(61, 61, 61, 0.15) inset,0 0 6px rgba(40, 40, 40, 0.20) inset;
+  color: white !important;
+}
+
+.btn-xlarge{font-size: $btn-size-xlarge;}
+.btn-large{font-size: $btn-size-large;}
+.btn-small{font-size: $btn-size-small;}
+.btn-xsmall{font-size: $btn-size-xsmall;}
