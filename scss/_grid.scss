@@ -36,8 +36,6 @@ $desktop: 64.063em !default; // 1025px
       }
     }
     .#{$suffix}-push-#{$i}{ left:$i / $grid-columns * 100%; }
-    .#{$suffix}-offset-#{$i}{ margin-left:$i / $grid-columns * 100%; }
-    .#{$suffix}-pull-#{$i}{ left:$i / $grid-columns * 100%; }
   }
 }
 
@@ -46,6 +44,9 @@ $desktop: 64.063em !default; // 1025px
 @mixin fraction-columns($suffix: ''){
 
   @for $i from 1 through ($grid-columns - 1){
+    .#{$suffix}-#{$i}{
+      width: 100%;
+    }
     @for $j from 1 through ($grid-columns){
       .#{$suffix}-#{$i}-#{$j}{
         width: 100% / $j * $i;
