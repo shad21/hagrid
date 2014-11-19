@@ -1,4 +1,4 @@
-/* Activer ou désactiver seconde syntaxe */
+
 $second-syntax: false;
 
 
@@ -10,7 +10,8 @@ $gutter: 0% !default;
 $tablet: 40.063em !default; // 641px
 $desktop: 64.063em !default; // 1025px
 
-// Function qui retourne le chiffre magique :)
+// Function qui retourne la constante
+// permettant de calculer les width des colonnes
 @function calculate-grid($total-grid-columns, $gutter-size){
   @return ((100% - ($total-grid-columns - 1) * $gutter-size) / $total-grid-columns);
 }
@@ -28,7 +29,6 @@ $desktop: 64.063em !default; // 1025px
     @if $i != 0 {
       .#{$suffix}-#{$i}{
         width: 100% - (($grid-columns - $i) * (calculate-grid($grid-columns, $gutter) + $gutter));
-        //flex-basis: pour plus tard.
         margin-right: $gutter;
         &:last-child{
           margin-right:0;
@@ -63,8 +63,10 @@ $desktop: 64.063em !default; // 1025px
   position: relative;
   min-height: 1px;
   @if($gutter == 0%){
-    padding: 0 0.8rem;
-  }@else {padding: 0;}
+    padding-left: 0.625rem;
+  }@else {
+    padding:0;
+  }
 }
 
 /*==============*/
@@ -74,15 +76,15 @@ $desktop: 64.063em !default; // 1025px
   max-width: $wrapper-max-width;
   margin: 0 auto;
   padding-top: 3.5rem;
+  @media only screen and (min-width: $tablet){
+    padding-top: 0;
+  }
   .row{
     margin: 0 auto 0.3rem 0;
     width: 100%;
     height: 100%;
     clear: both;
     @include clearfix;
-    > .row{
-      padding: 0.2rem;
-    }
   }
 }
 
@@ -91,15 +93,31 @@ $desktop: 64.063em !default; // 1025px
 /* Grid
 /*========*/
 
+@if ($second-syntax){
 
-@for $i from 1 through $grid-columns{
-  .sm-#{$i}, .md-#{$i}, .lg-#{$i} { @extend %col; }
-}
+  @for $i from 1 through ($grid-columns - 1){
+    @for $j from 1 through ($grid-columns){
+      .sm-#{$i}-#{$j}, .md-#{$i}-#{$j}, .lg-#{$i}-#{$j} { @extend %col; }
+    }
+  }
+  @include fraction-columns('sm');
+  @media only screen and (min-width: $tablet) {
+    @include fraction-columns('md');
+  }
+  @media only screen and (min-width: $desktop) {
+    @include fraction-columns('lg');
+  }
 
-
-@for $i from 1 through ($grid-columns - 1){
-  @for $j from 1 through ($grid-columns){
-    .sm-#{$i}-#{$j}, .md-#{$i}-#{$j}, .lg-#{$i}-#{$j} { @extend %col; }
+}@else if ( $second-syntax == false){ // ELSE
+  @include responsive-columns('sm');
+  @for $i from 1 through $grid-columns{
+    .sm-#{$i}, .md-#{$i}, .lg-#{$i} { @extend %col; }
+  }
+  @media only screen and (min-width: $tablet) {
+    @include responsive-columns('md');
+  }
+  @media only screen and (min-width: $desktop) {
+    @include responsive-columns('lg');
   }
 }
 
@@ -112,11 +130,13 @@ $desktop: 64.063em !default; // 1025px
 /* Mobile */
 
 @include responsive-columns('sm');
-@include fraction-columns('sm');
 .columns {
   width: 100%;
   position: relative;
   display: block;
+  @if ($gutter == 0%){
+    padding: 0 0.388rem;
+  }
 }
 .sm-center{ margin: 0 auto !important; float: none !important; }
 
@@ -130,8 +150,6 @@ $desktop: 64.063em !default; // 1025px
 /* Medium Screen */
 
 @media only screen and (min-width: $tablet) {
-  @include responsive-columns('md');
-  @include fraction-columns('md');
 
   .hide-only-sm{ display: block !important}
   .md-center{ margin: 0 auto !important; float: none !important; }
@@ -145,8 +163,6 @@ $desktop: 64.063em !default; // 1025px
 /* Large Screen */
 
 @media only screen and (min-width: $desktop) {
-  @include responsive-columns('lg');
- // @include fraction-columns('lg');
 
   .lg-center{ margin: 0 auto !important; float: none !important; }
 
