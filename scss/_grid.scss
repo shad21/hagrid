@@ -129,7 +129,6 @@ $desktop: 64.063em !default; // 1025px
 /*----------/
 /* Mobile */
 
-@include responsive-columns('sm');
 .columns {
   width: 100%;
   position: relative;
