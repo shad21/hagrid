@@ -1,3 +1,9 @@
+.clearfix{
+  zoom: 1;
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}
+
 .wrapper{
   margin-left: auto;
   margin-right: auto;
@@ -116,4 +122,43 @@ h6.hg-subtitle{
     font-size: 0.750rem;
     margin: 0;
   }
+}
+
+.hg-jum{
+  h1.hg-title{
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 4px 3px 0px #444349, 9px 8px 0px rgba(0, 0, 0, 0.15);
+    line-height: 1;
+    @media only screen and (min-width: $tablet){
+      font-size: 4rem;
+    }
+    @media only screen and (min-width: $desktop){
+      font-size: 5rem;
+    }
+  }
+  p{
+    color: #c7e7dc;
+    font-size: 1.1rem;
+  }
+  .hg-btn{
+    font-size: 24px;
+    margin-right: 6px;
+    color: #ffffff;
+    border-color: #c7e7dc;
+    background-color: transparent;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    @include border-radius(6px);
+    &:hover{
+      color: lightcoral;
+      background-color: #ffffff !important;
+      border-color: #FCAAA3;
+    }
+  }
+}
+
+.beta{
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }

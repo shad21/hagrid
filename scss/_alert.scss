@@ -1,8 +1,8 @@
 // variables
 $alert-success-color: white;
-$alert-danger-color: black;
+$alert-danger-color: white;
 $alert-info-color: white;
-$alert-avertissement-color: black;
+$alert-avertissement-color: white;
 
 $alert-success-bcgc: #1CB841;
 $alert-danger-bcgc: #F04124;
@@ -10,18 +10,59 @@ $alert-info-bcgc: #16bcf7;
 $alert-avertissement-bcgc: #ffaf1e;
 
 
-@mixin alert($alert-color: #4f4f4f, $alert-background-color: #15e8c0){
+.alert{
   @include border-radius(4px);
+  @include box-shadow(0 4px 7px rgba(black, 0.23), 0 8px 25px rgba(black, 0.05));
   padding: 8px 35px 8px 14px;
-  margin-bottom: 18px;
-  color: $alert-color;
-  background-color: $alert-background-color;
-  border: darken($alert-background-color, 10%) 1px solid;
-  // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.1rem;
+  font-weight: bold;
+
+  &.alert-on-top {
+    position: fixed;
+    top: 10px;
+    z-index: 80;
+  }
+
+  &.alert-on-center {
+    position: fixed;
+    top: 10px;
+    z-index: 80;
+  }
+
+  &.alert-on-bottom {
+    position: fixed;
+    bottom: 10px;
+    z-index: 80;
+  }
 }
 
-.alert{@include alert();}
-.success { @include alert($alert-success-color, $alert-success-bcgc);}
-.danger { @include alert($alert-danger-color, $alert-danger-bcgc); }
-.info { @include alert($alert-info-color, $alert-info-bcgc);}
-.avertissement { @include alert($alert-avertissement-color, $alert-avertissement-bcgc);}
+.alert-success{
+  background-color: $alert-success-bcgc;
+  color: $alert-success-color;
+}
+
+.alert-danger {
+  background-color: $alert-danger-bcgc;
+  color: $alert-danger-color;
+}
+.alert-info {
+  background-color: $alert-info-bcgc;
+  color: $alert-info-color;
+}
+.alert-avertissement {
+  background-color: $alert-avertissement-bcgc;
+  color: $alert-avertissement-color;
+}
+
+a.alert-close {
+  color: #000000;
+  text-shadow: 0 1px 0 #fff;
+  font-size: 26px;
+  line-height: 26px;
+  float: right;
+  opacity: .4;
+  &:hover{
+    color: #000000;
+    opacity: 1;
+  }
+}
