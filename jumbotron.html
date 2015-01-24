@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/favicon.ico">
+    <title>Welcome Hagrid</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/master.css"/>
+    <link rel="stylesheet" href="css/prism.css"/>
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="row" id="main">
+        <div class="lg-3 md-3 lg-show md-show desktop-menu">
+            <div id="menu-bar" class="side-nav">
+                <nav>
+                    <ul>
+                        <li><a href="hagrid.html">Home</a></li>
+                        <li><a href="grid.html">Grille</a></li>
+                        <li><a href="typo.html">Typographie</a></li>
+                        <li><a href="table.html">Tableaux</a></li>
+                        <li><a href="bouton.html">Bouton</a></li>
+                        <li><a href="breadcrumb.html">Breadcrumb</a></li>
+                        <li><a href="pagination.html">Pagination</a></li>
+                        <li><a href="navbar.html">Navbar</a></li>
+                        <li><a class="actif" href="jumbotron.html">Jumbotron</a></li>
+                        <li><a href="alert.html">Alertes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="lg-9 md-9 columns hagrid-main">
+            <div class="header align-center">
+                <h1>Jumbotron</h1>
+                <hr/>
+            </div>
+            <p>
+                Un Jumbotron est une grande boîte qui a pour objectif d'attirer l'attention sur un contenu. <br/>
+                Il occupe <b>100%</b> de son conteneur.
+            </p>
+            <h4 class="hg-subtitle">Exemple</h4>
+<pre><code class="language-markup">&lt;div class="jumbotron"&gt;
+    &lt;h1&gt;Jumbotron, it's awesome!&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi sapiente perspiciatis inventore fugiat numquam, eius, libero corporis quo sunt. Dicta placeat, explicabo illum molestias sint minus, dolor adipisci hic pariatur.&lt;/p&gt;
+    &lt;a href="#"&gt;&lt;button class="btn btn-green btn-xlarge"&gt;Check-out »&lt;/button&gt;&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+            <br/>
+            <div class="jumbotron-container">
+                <div class="jumbotron">
+                    <h1>Jumbotron, it's awesome!</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi sapiente perspiciatis inventore fugiat numquam, eius, libero corporis quo sunt. Dicta placeat, explicabo illum molestias sint minus, dolor adipisci hic pariatur.</p>
+                    <a href="#"><button class="btn btn-green btn-xlarge">Check-out »</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hagrid-footer align-center">
+    <p>&copy; Hagrid - From Harry Potter's saga!</p>
+</div>
+<!-- Js -->
+<script src="js/modernizr.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.slicknav.min.js"></script>
+<script>
+    $(function(){
+        $('#menu-bar').slicknav();
+    });
+</script>
+<script src="js/prism.js"></script>
+</body>
+</html>

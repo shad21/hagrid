@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/favicon.ico">
+    <title>Welcome Hagrid</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/master.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+</head>
+<body>
+<div class="beta"><img src="img/beta.png" alt=""/></div>
+<div class="jumbotron-container hg-jum clearfix">
+    <div class="sm-12">
+        <h1 class="hg-title">Hagrid Framework</h1>
+        <p>Un Framework CSS simple et efficace.</p>
+        <a href="#"><button class="btn hg-btn"><i class="fa fa-download fa-lg"></i> Télécharger</button></a>
+        <a target="_blank" href="https://github.com/shad21/hagrid"><button class="btn hg-btn"><i class="fa fa-github fa-lg"></i> GitHub</button></a>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="row" id="main">
+        <div class="lg-3 md-3 lg-show md-show desktop-menu">
+            <div id="menu-bar" class="side-nav">
+                <nav>
+                    <ul>
+                        <li><a class="actif" href="hagrid.html">Home</a></li>
+                        <li><a href="grid.html">Grille</a></li>
+                        <li><a href="typo.html">Typographie</a></li>
+                        <li><a href="table.html">Tableaux</a></li>
+                        <li><a href="bouton.html">Bouton</a></li>
+                        <li><a href="breadcrumb.html">Breadcrumb</a></li>
+                        <li><a href="pagination.html">Pagination</a></li>
+                        <li><a href="navbar.html">Navbar</a></li>
+                        <li><a href="jumbotron.html">Jumbotron</a></li>
+                        <li><a href="alert.html">Alertes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="lg-9 md-9 columns hagrid-main">
+            <div class="header align-center">
+                <h1>HaGrid</h1>
+                <hr/>
+            </div>
+            <p>
+                Hagrid est un framework CSS mobile first en cours de développement. Il utilise le préprocesseur <a class="hg-link" target="_blank" href="http://sass-lang.com/">SASS</a>, emploie le reset CSS
+                <a class="hg-link" target="_blank" href="http://necolas.github.io/normalize.css/">Normalize.css</a> et est entièrement responsif.
+                <br/>
+            </p>
+            <h1>Installation</h1>
+            <h4>> Prêt à l'emploi:</h4>
+            <p>Framework prêt à l'emploi sans personnalisation possible: <a class="hg-link" href="download/hagrid1.0.zip">Hagrid</a></p>
+            <h4>> Personnaliser avec compass</h4>
+            <p>Télécharger le framework: <a class="hg-link" href="download/hagrid1.0_full.zip">Hagrid</a></p>
+            <p>
+                Il faut avoir <b>compass & sass</b> d'installer sur sa machine et lancer <code>compass watch</code> pour pouvoir prendre en compte les
+                modifications (si l'on souhaite en faire).
+                <br/>
+                Des variables permmettent de customizer les éléments (boutons, tableaux, typographie, alertes, pagination, fil d'ariane, barre de navigation, etc.).
+                Elles sont accessibles depuis chacun des fichiers <em>_nomDuComposant.scss</em>.</p>
+            <p>Les composants modifiables sont:</p>
+            <div class="lg-3 md-5 sm-center lg-center md-center">
+                <ul class="square">
+                    <li><b><em>_alert.scss</em></b></li>
+                    <li><b><em>_breadcrumb.scss</em></b></li>
+                    <li><b><em>_button.scss</em></b></li>
+                    <li><b><em>_grid.scss</em></b></li>
+                    <li><b><em>_jumbotron.scss</em></b></li>
+                    <li><b><em>_navbar.scss</em></b></li>
+                    <li><b><em>_pagination.scss</em></b></li>
+                    <li><b><em>_table.scss</em></b></li>
+                    <li><b><em>_typo.scss</em></b></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hagrid-footer align-center">
+    <p>&copy; Hagrid - From Harry Potter's saga!</p>
+</div>
+<!-- Js -->
+<script src="js/modernizr.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.slicknav.min.js"></script>
+<script>
+    $(function(){
+        $('#menu-bar').slicknav();
+    });
+</script>
+</body>
+</html>

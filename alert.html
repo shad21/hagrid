@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/favicon.ico">
+    <title>Welcome Hagrid</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/master.css"/>
+    <link rel="stylesheet" href="css/prism.css"/>
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="row" id="main">
+        <div class="lg-3 md-3 lg-show md-show desktop-menu">
+            <div id="menu-bar" class="side-nav">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="grid.html">Grille</a></li>
+                        <li><a href="typo.html">Typographie</a></li>
+                        <li><a href="table.html">Tableaux</a></li>
+                        <li><a href="bouton.html">Bouton</a></li>
+                        <li><a href="breadcrumb.html">Breadcrumb</a></li>
+                        <li><a href="pagination.html">Pagination</a></li>
+                        <li><a href="navbar.html">Navbar</a></li>
+                        <li><a href="jumbotron.html">Jumbotron</a></li>
+                        <li><a class="actif" href="alert.html">Alertes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="lg-9 md-9 columns hagrid-main">
+            <div class="header align-center">
+                <h1>Messages d'alerte</h1>
+                <hr/>
+            </div>
+            <p>Ce sont des éléments qui permettent de prévenir l'utilisateur d'un danger, d'une information, d'un avertissement ou d'un danger. Ils occuppent 100% de la taille de leur conteneur.</p>
+            <h4 class="hg-subtitle">Exemple</h4>
+
+            <div class="alert alert-success"><a href="#" class="alert-close" data-dismiss="alert">&times;</a>Message de succès</div>
+            <div class="alert alert-danger"><a href="#" class="alert-close" data-dismiss="alert">&times;</a>Message de danger</div>
+            <div class="alert alert-info"><a href="#" class="alert-close" data-dismiss="alert">&times;</a>Message d'information</div>
+            <div class="alert alert-avertissement"><a href="#" class="alert-close" data-dismiss="alert">&times;</a>Message d'avertissement</div>
+
+            <h4 class="hg-subtitle">Code</h4>
+<pre><code class="language-markup">&lt;div class="alert alert-success"&gt;&lt;a href="#" class="alert-close" data-dismiss="alert"&gt;&times;&lt;/a&gt;Message de succès&lt;/div&gt;
+&lt;div class="alert alert-danger"&gt;&lt;a href="#" class="alert-close" data-dismiss="alert"&gt;&times;&lt;/a&gt;Message de danger&lt;/div&gt;
+&lt;div class="alert alert-info"&gt;&lt;a href="#" class="alert-close" data-dismiss="alert"&gt;&times;&lt;/a&gt;Message d'information&lt;/div&gt;
+&lt;div class="alert alert-avertissement"&gt;&lt;a href="#" class="alert-close" data-dismiss="alert"&gt;&times;&lt;/a&gt;Message d'avertissement&lt;/div&gt;
+</code></pre>
+        </div>
+    </div>
+</div>
+<div class="hagrid-footer align-center">
+    <p>&copy; Hagrid - From Harry Potter's saga!</p>
+</div>
+<!-- Js -->
+<script src="js/modernizr.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.slicknav.min.js"></script>
+<script src="js/prism.js"></script>
+<script src="js/alert.js"></script>
+<script>
+    $(function(){
+        $('#menu-bar').slicknav();
+    });
+</script>
+</body>
+</html>

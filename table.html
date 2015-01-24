@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/favicon.ico">
+    <title>Welcome Hagrid</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/master.css"/>
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="row" id="main">
+        <div class="lg-3 md-3 lg-show md-show desktop-menu">
+            <div id="menu-bar" class="side-nav">
+                <nav>
+                    <ul>
+                        <li><a href="hagrid.html">Home</a></li>
+                        <li><a href="grid.html">Grille</a></li>
+                        <li><a href="typo.html">Typographie</a></li>
+                        <li><a class="actif" href="table.html">Tableaux</a></li>
+                        <li><a href="bouton.html">Bouton</a></li>
+                        <li><a href="breadcrumb.html">Breadcrumb</a></li>
+                        <li><a href="pagination.html">Pagination</a></li>
+                        <li><a href="navbar.html">Navbar</a></li>
+                        <li><a href="jumbotron.html">Jumbotron</a></li>
+                        <li><a href="alert.html">Alertes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="lg-9 md-9 columns hagrid-main">
+            <div class="header align-center">
+                <h1>Tableaux</h1>
+                <hr/>
+            </div>
+            <h2>Tableau par défaut</h2>
+            <p>Utilisez la balise <code>&lt;table&gt;</code> par défaut.</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Premier titre </th>
+                    <th>Titre</th>
+                    <th>Autre titre</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Lorem ipsum dolor sit amet, in felis justo arcu ornare, mauris pretium odio ut, adipiscing.</td>
+                    <td>a praesent ante</td>
+                    <td>a praesent ante</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lorem ipsum dolor sit amet, in felis justo arcu ornare, mauris pretium odio ut, adipiscing.</td>
+                    <td>a praesent ante</td>
+                    <td>a praesent ante</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Lorem ipsum dolor sit amet, in felis justo arcu ornare, mauris pretium odio ut, adipiscing.</td>
+                    <td>a praesent ante</td>
+                    <td>a praesent ante</td>
+                </tr>
+                </tbody>
+            </table>
+            <hr/>
+            <h2>Tableau avec bordure</h2>
+            <p>Il faut ajouter la classe <code>.bordered</code> à l'élément <code>&lt;table&gt;</code>.</p>
+            <table class="bordered">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Premier titre </th>
+                    <th>Titre</th>
+                    <th>Autre titre</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Lorem ipsum dolor sit amet, in felis justo arcu ornare, mauris pretium odio ut, adipiscing.</td>
+                    <td>a praesent ante</td>
+                    <td>a praesent ante</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lorem ipsum dolor sit amet, in felis justo arcu ornare, mauris pretium odio ut, adipiscing.</td>
+                    <td>a praesent ante</td>
+                    <td>a praesent ante</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Lorem ipsum dolor sit amet, in felis justo arcu ornare, mauris pretium odio ut, adipiscing.</td>
+                    <td>a praesent ante</td>
+                    <td>a praesent ante</td>
+                </tr>
+                </tbody>
+            </table>
+            <hr/>
+            <h2>Tableaux alternés</h2>
+            <div class="row">
+                <div class="hg-table-container">
+                    <table class="hg-table">
+                        <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.stripped-odd</code></td>
+                                <td>Ajoutez cette classe sur un élément <code>&lt;table&gt;</code> afin de créer un tableau alterné impair.</td>
+                            </tr>
+                            <tr>
+                                <td><code>.stripped-even</code></td>
+                                <td>Ajoutez cette classe sur un élément <code>&lt;table&gt;</code> afin de créer un tableau alterné pair.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="lg-5 columns">
+
+                    <table class="stripped-odd align-center">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Premier titre </th>
+                            <th>Titre</th>
+                            <th>Autre titre</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="lg-5 lg-push-1 columns">
+                    <table class="stripped-even align-center">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Premier titre </th>
+                            <th>Titre</th>
+                            <th>Autre titre</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                            <td>a praesent ante</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr/>
+            <h2>Tableau avec lignes actives au survol</h2>
+            <p>Il faut ajouter la classe <code>.hover</code> à l'élément <code>&lt;table&gt;</code>.</p>
+            <table class="hover">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Premier titre </th>
+                    <th>Titre</th>
+                    <th>Autre titre</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Lorem ipsum dolor sit amet, in felis justo arcu ornare, mauris pretium odio ut, adipiscing.</td>
+                    <td>a praesent ante</td>
+                    <td>a praesent ante</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lorem ipsum dolor sit amet, in felis justo arcu ornare, mauris pretium odio ut, adipiscing.</td>
+                    <td>a praesent ante</td>
+                    <td>a praesent ante</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Lorem ipsum dolor sit amet, in felis justo arcu ornare, mauris pretium odio ut, adipiscing.</td>
+                    <td>a praesent ante</td>
+                    <td>a praesent ante</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Lorem ipsum dolor sit amet, in felis justo arcu ornare, mauris pretium odio ut, adipiscing.</td>
+                    <td>a praesent ante</td>
+                    <td>a praesent ante</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="hagrid-footer align-center">
+    <p>&copy; Hagrid - From Harry Potter's saga!</p>
+</div>
+<!-- Js -->
+<script src="js/modernizr.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.slicknav.min.js"></script>
+<script>
+    $(function(){
+        $('#menu-bar').slicknav();
+    });
+</script>
+</body>
+</html>

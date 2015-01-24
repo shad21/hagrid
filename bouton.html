@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/favicon.ico">
+    <title>Welcome Hagrid</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/master.css"/>
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="row" id="main">
+        <div class="lg-3 md-3 lg-show md-show desktop-menu">
+            <div id="menu-bar" class="side-nav">
+                <nav>
+                    <ul>
+                        <li><a href="hagrid.html">Home</a></li>
+                        <li><a href="grid.html">Grille</a></li>
+                        <li><a href="typo.html">Typographie</a></li>
+                        <li><a href="table.html">Tableaux</a></li>
+                        <li><a class="actif" href="bouton.html">Bouton</a></li>
+                        <li><a href="breadcrumb.html">Breadcrumb</a></li>
+                        <li><a href="pagination.html">Pagination</a></li>
+                        <li><a href="navbar.html">Navbar</a></li>
+                        <li><a href="jumbotron.html">Jumbotron</a></li>
+                        <li><a href="alert.html">Alertes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="lg-9 md-9 columns hagrid-main">
+            <div class="header align-center">
+                <h1>Boutons</h1>
+                <hr/>
+            </div>
+            <h2>Bouton par défaut</h2>
+            <p>Pour créer un boutton basique il suffit d'utiliser la classe <code>.btn</code> sur un lien  ou un bouton.</p>
+            <a class="btn" href="#">Bouton basique</a>
+            <hr/>
+            <h2>Bouton de couleurs</h2>
+            <p>Les boutons ci-dessous utilisent respectivement les classes <br/>
+                <code>.btn-red</code>, <code>.btn-brown</code>, <code>.btn-green</code>, <code>.btn-blue</code>, <code>.btn-purple</code> et <code>.btn-yellow</code>.</p>
+            <button class="btn-red">Bouton rouge</button>
+            <button class="btn-brown">Bouton marron</button>
+            <button class="btn-green">Bouton vert</button>
+            <button class="btn-blue">Bouton bleu</button>
+            <button class="btn-purple">Bouton violet</button>
+            <button class="btn-yellow">Bouton jaune</button>
+            <hr/>
+            <h2>Boutons de différentes tailles</h2>
+            <p>Les boutons ci-dessous utilisent respectivement les classes: <br/>
+                <code>.btn-xlarge</code>, <code>.btn-xlarge</code>, <code>.btn-large</code>, <code>.btn-small</code> et <code>.btn-xsmall</code>.</p>
+            <button class="btn btn-xlarge">Bouton très large</button>
+            <button class="btn btn-large">Bouton large</button>
+            <button class="btn btn-small">Bouton petit -small</button>
+            <button class="btn btn-xsmall">Bouton très petit -xsmall</button>
+            <hr/>
+            <h2>Boutons actif / inactif</h2>
+            <p>Les boutons ci-dessous utilisent respectivement les classes: <br/>
+                <code>.disabled</code> et <code>.active</code>
+            </p>
+            <button class="disabled">Bouton désactivé</button>
+            <button class="btn active">Bouton actif</button>
+        </div>
+    </div>
+</div>
+<div class="hagrid-footer align-center">
+    <p>&copy; Hagrid - From Harry Potter's saga!</p>
+</div>
+<!-- Js -->
+<script src="js/modernizr.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.slicknav.min.js"></script>
+<script>
+    $(function(){
+        $('#menu-bar').slicknav();
+    });
+</script>
+</body>
+</html>

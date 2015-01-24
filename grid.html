@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/favicon.ico">
+    <title>Welcome Hagrid</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/master.css"/>
+    <link rel="stylesheet" href="css/prism.css"/>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="row" id="main">
+        <div class="lg-3 md-3 lg-show md-show desktop-menu">
+            <div id="menu-bar" class="side-nav">
+                <nav>
+                    <ul>
+                        <li><a href="hagrid.html">Home</a></li>
+                        <li><a class="actif" href="grid.html">Grille</a></li>
+                        <li><a href="typo.html">Typographie</a></li>
+                        <li><a href="table.html">Tableaux</a></li>
+                        <li><a href="bouton.html">Bouton</a></li>
+                        <li><a href="breadcrumb.html">Breadcrumb</a></li>
+                        <li><a href="pagination.html">Pagination</a></li>
+                        <li><a href="navbar.html">Navbar</a></li>
+                        <li><a href="jumbotron.html">Jumbotron</a></li>
+                        <li><a href="alert.html">Alertes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="lg-9 md-9 columns hagrid-main">
+            <div class="header">
+                <h1 class="align-center">Grille</h1>
+                <hr/>
+            </div>
+            <p>
+                La première chose à faire est de modifier, au besoin, quelques propriétés dans le fichier <em>_grid.scss</em>
+                <br/>
+                A savoir: la largeur maximale du container principal, le nombre de colonnes souhaitées, la largeur des gouttières, les media queries pour tablette et bureau.
+                Par défaut, les valeurs sont les suivantes:
+            </p>
+<pre><code class="language-scss">$wrapper-max-width:1200px !default; /* Définir en px, %, rem ou em */
+$grid-columns:12 !default;
+$gutter:0% !default; /* Définir en % uniquement */
+$tablet:40.063em !default; /* 641px - Définir en px, em ou rem */
+$desktop:64.063em !default; /* 1025px - Définir en px, em ou rem */</code></pre>
+            <p>
+                Pour créer une nouvelle page il faut tout d'abord définir un élément <code>&lt;div&gt;</code> avec la classe <code>.wrapper</code>. C'est le conteneur principal. Il englobera la page web.
+                Il faut ensuite déclarer un élément <code>&lt;div&gt;</code> en lui associant la classe <code>.row</code>.
+            </p>
+            <h1>Syntaxe</h1>
+            <p>
+                Il faut spécifier la largeur de chaque colonnes en utilisant les classes <b>sm-#</b>, <b>md-#</b> et <b>lg-#</b>.
+                <br/>
+                Si l'on souhaite avoir <b>2</b>, <b>4</b> et <b>6</b> colonnes dans une row pour tous types d'écrans (mobile, tablette, bureau),
+                il suffit de déclarer les classes <code>.sm-2</code>, <code>.sm-4</code> et <code>.sm-6</code>.
+            </p>
+            <h4 class="hg-subtitle">Exemples</h4>
+            <div class="row hagrid-row align-center">
+                <div class="sm-2 ">
+                    <span>sm-2</span>
+                </div>
+                <div class="sm-4 ">
+                    <span>sm-4</span>
+                </div>
+                <div class="sm-6 ">
+                    <span>sm-6</span>
+                </div>
+            </div>
+            <div class="row hagrid-row align-center">
+                <div class="sm-3 ">
+                    <span>sm-7</span>
+                </div>
+                <div class="sm-5 ">
+                    <span>sm-5</span>
+                </div>
+            </div>
+            <div class="row hagrid-row align-center">
+                <div class="sm-3 ">
+                    <span>sm-3</span>
+                </div>
+                <div class="sm-3 ">
+                    <span>sm-3</span>
+                </div>
+                <div class="sm-3 ">
+                    <span>sm-3</span>
+                </div>
+                <div class="sm-3 ">
+                    <span>sm-3</span>
+                </div>
+            </div>
+            <p>En redimenssionnant l'écran on constate que le nombre de colonnes reste inchangé quelque soit la largeur car elles héritent des
+                caractéristiques de base, la base étant le mobile.</p>
+            <hr/>
+            <h1>Hide-and-seek</h1>
+            <p>
+                Il est possible de modifier le nombre de colonnes selon le type de média sur lequel on est. C'est là le but 1er du framework.
+                Pour ce faire, il faut jouer avec les classes <code>.sm-show</code>, <code>.hide-only-sm</code> , <code>.md-show</code>, <code>.md-hide</code>, <code>.lg-show</code>
+                et <code>.lg-hide</code>.
+            </p>
+
+            <h4 class="hg-subtitle">Exemples</h4>
+            <p>Pour bien comprendre, visualiser le 1er exemple en partant du format smartphone puis, étendre jusqu'au format tablette et enfin bureau.</p>
+            <div class="row hagrid-row align-center">
+                <span class="sm-show">Je suis visible uniquement sur smartphone. <code>.sm-show</code><hr/></span>
+                <span class="hide-only-sm">Je me cache uniquement sur smartphone. <code>.hide-only-sm</code><hr/></span>
+                <span class="md-show">Je suis visible uniquement sur tablette. <code>.md-show</code><hr/></span>
+                <span class="lg-show">Je suis visible uniquement sur bureau. <code>.lg-show</code></span>
+                <span class="md-hide">Je serai invisible à partir du format tablette. <code>.md-hide</code><hr/></span>
+                <span class="lg-hide">Je serai invisible à partir du format bureau. <code>.lg-hide</code></span>
+            </div>
+            <div class="row hagrid-row align-center">
+                <div class="lg-3 sm-12">
+                    <span class="lg-show">lg-3</span>
+                    <span class="lg-hide">sm-12</span>
+                </div>
+                <div class="lg-6 sm-12">
+                    <span class="lg-show">lg-6</span>
+                    <span class="lg-hide">sm-12</span>
+                </div>
+                <div class="lg-3 sm-12">
+                    <span class="lg-show">lg-3</span>
+                    <span class="lg-hide">sm-12</span>
+                </div>
+            </div>
+            <div class="row hagrid-row align-center">
+                <div class="sm-6 lg-7 ">
+                    <span class="lg-show">lg-7</span>
+                    <span class="lg-hide">6</span>
+                </div>
+                <div class="sm-6 lg-5 ">
+                    <span class="lg-show">lg-5</span>
+                    <span class="lg-hide">6</span>
+                </div>
+            </div>
+            <div class="row hagrid-row align-center">
+                <div class="sm-6 lg-2 ">
+                    <span class="lg-show">lg-2</span>
+                    <span class="lg-hide">6</span>
+                </div>
+                <div class="sm-6 lg-8 ">
+                    <span class="lg-show">lg-8</span>
+                    <span class="lg-hide">6</span>
+                </div>
+                <div class="sm-12 lg-2">
+                    <span class="lg-show">lg-2</span>
+                    <span class="lg-hide">sm-12</span>
+                </div>
+            </div>
+            <p>
+                Le dernier exemple ci-dessous n'a pas un comportement logique que l'on pourrait retrouver sur un site, il sert uniquement à
+                montrer les possibilités d'adaptation de la grille sur différents médias.
+            </p>
+            <div class="row hagrid-row align-center">
+                <div class="md-4 lg-3 sm-12">
+                    <span class="lg-show">lg-3</span>
+                    <span class="md-show">md-4</span>
+                    <span class="sm-show">sm-12</span>
+                </div>
+                <div class="sm-6 md-2 lg-3 ">
+                    <span class="sm-show">sm-6</span>
+                    <span class="lg-show">lg-3</span>
+                    <span class="md-show">md-2</span>
+                </div>
+                <div class="sm-6 md-2 lg-3 ">
+                    <span class="sm-show">sm-6</span>
+                    <span class="lg-show">lg-3</span>
+                    <span class="md-show">md-2</span>
+                </div>
+                <div class="md-4 lg-3 columns">
+                    <span class="sm-show">sm-12</span>
+                    <span class="lg-show">lg-3</span>
+                    <span class="md-show">md-4</span>
+                </div>
+            </div>
+            <hr/>
+            <h1>Positionnement</h1>
+            <p>Il est possible de décaler les colonnes en utilisant la syntaxe <b><em>suffix</em>-push-<em>#</em></b></p>
+            <h4 class="hg-subtitle">Exemple</h4>
+            <div class="row hagrid-row">
+                <div class="sm-1 sm-push-1">
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="row hagrid-row">
+                <div class="sm-1 sm-push-2">
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="row hagrid-row">
+                <div class="sm-1 sm-push-3">
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="row hagrid-row">
+                <div class="sm-1 sm-push-4">
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="row hagrid-row">
+                <div class="sm-1 sm-push-5">
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="row hagrid-row">
+                <div class="sm-1 sm-push-6">
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="row hagrid-row">
+                <div class="sm-1 sm-push-7">
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="row hagrid-row">
+                <div class="sm-1 sm-push-8">
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="row hagrid-row">
+                <div class="sm-1 sm-push-9">
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="row hagrid-row">
+                <div class="sm-1 sm-push-10">
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="row hagrid-row">
+                <div class="sm-1 sm-push-11">
+                    <div class="box"></div>
+                </div>
+            </div>
+            <hr/>
+            <h1>Grilles imbriquées</h1>
+            <div class="row">
+                <div class="lg-6 sm-12">
+                    <p>Il est possible de créer divers layout en imbriquant les grilles, comme le montre l'exemple suivant :</p>
+                </div>
+                <div class="lg-6 columns align-center">
+                    <div class="row grid-ex">
+                        <div class="columns col"><p>12</p></div>
+                    </div>
+                    <div class="row grid-ex">
+                        <div class="sm-6 col no-border"><p>6</p></div>
+                        <div class="sm-6 col">
+                            <p>6</p>
+                            <div class="row grid-ex">
+                                <div class="sm-6 col no-border"><p>6</p></div>
+                                <div class="sm-6 col"><p>6</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row grid-ex">
+                        <div class="sm-4 col no-border">
+                            <p>4</p>
+                            <div class="row grid-ex">
+                                <div class="sm-4 col no-border"><p>4</p></div>
+                                <div class="sm-4 col no-border"><p>4</p></div>
+                                <div class="sm-4 col"><p>4</p></div>
+                            </div>
+                        </div>
+                        <div class="sm-4 col no-border">
+                            <p>4</p>
+                            <div class="row grid-ex">
+                                <div class="sm-5 col no-border"><p>5</p></div>
+                                <div class="sm-3 col no-border"><p>3</p></div>
+                                <div class="sm-4 col"><p>4</p></div></div>
+                            </div>
+                        <div class="sm-4 col">
+                            <p>4</p>
+                            <div class="row grid-ex">
+                                <div class="sm-3 col no-border"><p>3</p></div>
+                                <div class="sm-6 col no-border"><p>6</p></div>
+                                <div class="sm-3 col"><p>3</p></div></div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hagrid-footer align-center">
+    <p>&copy; Hagrid - From Harry Potter's saga!</p>
+</div>
+<!-- Js -->
+<script src="js/modernizr.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.slicknav.min.js"></script>
+<script>
+    $(function(){
+        $('#menu-bar').slicknav();
+    });
+</script>
+<script src="js/prism.js"></script>
+</body>
+</html>
