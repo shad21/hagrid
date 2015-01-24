@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/favicon.ico">
+    <title>Welcome Hagrid</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/master.css"/>
+    <link rel="stylesheet" href="css/prism.css"/>
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="row" id="main">
+        <div class="lg-3 md-3 hide-only-sm desktop-menu">
+            <div id="menu-bar" class="side-nav">
+                <nav>
+                    <ul>
+                        <li><a href="hagrid.html">Home</a></li>
+                        <li><a href="grid.html">Grille</a></li>
+                        <li><a href="typo.html">Typographie</a></li>
+                        <li><a href="table.html">Tableaux</a></li>
+                        <li><a href="bouton.html">Bouton</a></li>
+                        <li><a href="breadcrumb.html">Breadcrumb</a></li>
+                        <li><a href="pagination.html">Pagination</a></li>
+                        <li><a class="actif" href="navbar.html">Navbar</a></li>
+                        <li><a href="jumbotron.html">Jumbotron</a></li>
+                        <li><a href="alert.html">Alertes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="lg-9 md-9 columns hagrid-main">
+            <div class="header align-center">
+                <h1>Barre de navigation</h1>
+                <hr/>
+            </div>
+            <p>
+                La barre de navigation emploie le plugin <a class="hg-link" href="http://slicknav.com/">SlickNav</a> écrit en Jquery. Il permet l'affichage du menu sur écran
+                de petite taille.
+            </p>
+            <h3>Installation</h3>
+            <p>
+                Il faut, au préalable, importer la librairie javaScript <b>modernizr.js</b>, <b>JQuery</b> ainsi que <b>jquery.slicknav.min.js</b>.
+                Les fichiers se situent à la racine du framework, dans le dossier <em>js/</em>. Il est préférable de les importer à la fin du document HTML,
+                juste avant la fermeture du <code>&lt;/body&gt;</code>.
+            </p>
+<pre><code class="language-markup">&lt;script src="js/modernizr.js">&lt;/script&gt;
+&lt;script src="js/jquery-1.11.1.min.js">&lt;/script&gt;
+&lt;script src="SlickNav/jquery.slicknav.min.js"&gt;&lt;/script&gt;</code></pre>
+
+            <p> Pour créer une barre de navigation il faut déclarer un élément <code>&lt;nav&gt;</code> comme suit:
+            </p>
+<pre><code class="language-markup">&lt;nav class="navbar" id="menubar"&gt;
+    &lt;ul>
+        &lt;li>&lt;a href="">Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Bouton&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Tableaux&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Grille&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Typo&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Alertes&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;Navigation
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=""&gt;Navbar&lt;/a&gt;/li&gt;
+                &lt;li&gt;&lt;a href=""&gt;Breadcrumb&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=""&gt;Pagination&lt;/a&gt;&lt;/li&gt;
+            &lt;u/&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Jumbotron&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav></code></pre>
+            <p>Enfin, il faut initialiser le script comme suit:</p>
+<pre>
+<code class="language-markup">&lt;script&gt;
+    $(function(){
+        $('#menubar').slicknav();
+    });
+&lt;/script&gt;</code></pre>
+            <h4 class="hg-subtitle">Exemple</h4>
+            <p>Redimensionner la fenêtre pour que le menu apparaîsse en faut de l'écran.</p>
+            <nav class="navbar" id="menubar">
+                <ul>
+                    <li><a href="hagrid.html">Home</a></li>
+                    <li><a href="bouton.html">Bouton</a></li>
+                    <li><a href="table.html">Tableaux</a></li>
+                    <li><a href="grid.html">Grille</a></li>
+                    <li><a href="typo.html">Typo</a></li>
+                    <li><a href="alert.html">Alertes</a></li>
+                    <li>Navigation
+                        <ul>
+                            <li><a href="navbar.html">Navbar</a></li>
+                            <li><a href="breadcrumb.html">Breadcrumb</a></li>
+                            <li><a href="pagination.html">Pagination</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Jumbotron</a></li>
+                </ul>
+            </nav>
+            <br/><br/>
+        </div>
+    </div>
+</div>
+<div class="hagrid-footer align-center">
+    <p>&copy; Hagrid - From Harry Potter's saga!</p>
+</div>
+<!-- Js -->
+<script src="js/modernizr.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.slicknav.min.js"></script>
+<script src="js/prism.js"></script>
+<script>
+    $(function(){
+        $('#menubar').slicknav();
+    });
+</script>
+</body>
+</html>
